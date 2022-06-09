@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Paises</h1>
+  <p class="lead">en esta pestana puede agregar, ver o editar paises</p>
+  <hr class="my-4">
+  <p>seleccione la accion que desea ejecutar</p>
+  <a class="btn btn-primary btn-lg" href="/pais/insert" role="button">Ingresar</a>
+  <a class="btn btn-primary btn-lg" href="/pais/view" role="button">Visualizar</a>
+  <a class="btn btn-primary btn-lg" href="/pais/set" role="button">editar</a>
+  <a class="btn btn-primary btn-lg" href="/pais/delete" role="button">eliminar</a>
+</div>
+
+{% endblock %}

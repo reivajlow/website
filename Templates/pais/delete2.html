@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/pais/savedelete" method="POST">
+    <div class="col-md-6">
+        <label for="id pais" class="form-label">id </label>
+        <input type="text" name="id pais" class="form-control" id="id pais" value="{{ pais.0 }}" readonly>
+    </div>
+    <div class="col-md-8">
+        <label for="eliminar jugador" class="form-label">Esta seguro que desea eliminar el pais</label>
+        <select name="estado" id="eliminar jugador" class="form-select">
+          <option selected>no</option>
+          <option>no</option>
+          <option>si</option>
+        </select>
+    </div>
+    <div class="col-md-12">
+        <button type="submit">Guardar</button>
+    </div>
+</form>
+
+{% endblock %}

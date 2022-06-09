@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block content %}
+<form  action="/save_insert" method="POST">
+  <div class="col-md-6">
+    <label for="nombre jugador" class="form-label">nombre </label>
+    <input type="text" name="nombre jugador" class="form-control" id="nombre jugador" >
+  </div>
+  <div class="col-md-6">
+    <label for="apellido jugador" class="form-label">apellido</label>
+    <input type="text" name="apellido jugador" class="form-control" id="apellido jugador">
+  </div>
+  <div class="col-12">
+    <label for="aka jugador" class="form-label">aka</label>
+    <input type="text" name="aka jugador" class="form-control" id="aka jugador" >
+  </div>
+  <div class="col-md-4">
+    <label for="pais jugador" class="form-label">pais</label>
+    <select name="pais jugador" id="pais jugador" class="form-select">
+      <option selected>pais...</option>
+      <option>chile</option>
+      <option>argentina</option>
+      <option>peru</option>
+    </select>
+  </div>
+
+  <div class="col-md-5">
+    <label for="equipo jugador" class="form-label">equipo</label>
+    <select name="equipo jugador" id="equipo jugador" class="form-select">
+      <option selected>Choose...</option>
+      <option>g2</option>
+      <option>drip</option>
+      <option>olc</option>
+    </select>
+  </div>
+  <div class="col-12">
+    <label for="cumple jugador" class="form-label">cumple</label>
+    <input name="cumple jugador" type="date" class="form-control" id="cumple jugador">
+  </div>
+  <div class="col-md-2">
+    <label for="genero jugador" class="form-label">genero</label>
+    <select name="genero jugador" id="genero jugador" class="form-select">
+      <option selected>Choose...</option>
+      <option>M</option>
+      <option>F</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="rol jugador" class="form-label">rol</label>
+    <select name="rol jugador" id="rol jugador" class="form-select">
+      <option selected>Choose...</option>
+      <option>sniper</option>
+      <option>entry</option>
+      <option>support</option>
+    </select>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        no soy un robot
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" >guardar</button>
+  </div>
+</form>
+{% endblock %}

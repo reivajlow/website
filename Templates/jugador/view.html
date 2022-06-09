@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view</title>
+</head>
+<body>
+{% extends "layout.html" %}
+{% block content %}
+<form action="/view-2" method="POST">
+    <input type="number" name="id" placeholder="Id del jugador">
+    <button type="submit">
+        Buscar
+    </button>
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <td>Id</td>
+        <td>nombre</td>
+        <td>aka</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for jugador in jugadores %}
+    <tr>
+        <td>{{ jugador.0 }}</td>
+        <td>{{ jugador.1 }}</td>
+        <td>{{ jugador.2 }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+</body>
+</html>

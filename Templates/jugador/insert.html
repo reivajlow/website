@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/save_insert" method="POST">
+    <input type="text" name="nombre jugador" placeholder="nombre jugador">
+    <input type="text" name="apellido jugador" placeholder="apellido jugador">
+    <input type="text" name="aka jugador" placeholder="aka jugador">
+    <input type="text" name="pais jugador" placeholder="pais jugador">
+    <input type="text" name="equipo jugador" placeholder="equipo  jugador">
+    <input type="date" name="cumple jugador" placeholder="cumple jugador">
+    <input type="text" name="genero jugador" placeholder="genero jugador">
+    <input type="text" name="rol jugador" placeholder="rol jugador">
+    <button type="submit">
+        guardar
+    </button>
+
+</form>
+
+
+
+{% endblock %}

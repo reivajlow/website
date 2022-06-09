@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>
+    Debe ingresar todos los atributos nuevamente:
+    en caso de no modificar escribir mismo texto dentro del cuadro
+</h1>
+<form action="/save_edit" method="POST">
+    <input type="text" name="id" placeholder="" value="{{ datos.0 }}" readonly>
+    <input type="text" name="nombre jugador" placeholder="nombre" value="{{ datos.1 }}">
+    <input type="text" name="apellido jugador" placeholder="apellido" value="{{ datos.2 }}">
+    <input type="text" name="aka jugador" placeholder="aka jugador" value="{{ datos.3 }}">
+    <input type="text" name="pais jugador" placeholder="pais jugador" value="{{ datos.4 }}" >
+    <input type="text" name="equipo jugador" placeholder="equipo jugador" value="{{ datos.5}}">
+    <input type="date" name="cumple jugador" placeholder="cumple jugador" value="{{ datos.6 }}">
+    <input type="text" name="genero jugador" placeholder="genero jugador" value="{{ datos.7 }}">
+    <input type="text" name="rol jugador" placeholder="rol jugador" value="{{ datos.8 }}">
+    <button type="submit">
+        guardar
+    </button>
+
+</form>
+
+
+
+{% endblock %}

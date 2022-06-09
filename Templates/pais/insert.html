@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/pais/saveinsert" method="POST">
+    <div class="col-md-6">
+        <label for="nombre jugador" class="form-label">nombre </label>
+        <input type="text" name="nombre pais" class="form-control" id="nombre jugador" >
+    </div>
+    <div class="col-md-8">
+        <button type="submit">Guardar</button>
+    </div>
+</form>
+
+{% endblock %}

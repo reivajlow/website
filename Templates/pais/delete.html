@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/pais/delete2" method="POST">
+    <input type="number" name="id pais" placeholder="Id del pais">
+    <button type="submit">
+        buscar
+    </button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <td>Id</td>
+        <td>nombre</td>
+        <td>abreviacion</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for pais in paises %}
+    <tr>
+        <td>{{ pais.0 }}</td>
+        <td>{{ pais.1 }}</td>
+        <td>{{ pais.2 }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view</title>
+</head>
+<body>
+{% extends "layout.html" %}
+{% block content %}
+<form action="/view-2" method="POST">
+    <input type="number" name="id" placeholder="Id del jugador">
+    <button type="submit">
+        buscar
+    </button>
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <td>Id</td>
+        <td>nombre</td>
+        <td>apellido</td>
+        <td>aka</td>
+        <td>pais</td>
+        <td>equipo</td>
+        <td>Fecha nacimiento</td>
+        <td>genero</td>
+        <td>rol</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{ jugador.0 }}</td>
+        <td>{{ jugador.1 }}</td>
+        <td>{{ jugador.2 }}</td>
+        <td>{{ jugador.3 }}</td>
+        <td>{{ jugador.4 }}</td>
+        <td>{{ jugador.5 }}</td>
+        <td>{{ jugador.6 }}</td>
+        <td>{{ jugador.7 }}</td>
+        <td>{{ jugador.8 }}</td>
+    </tr>
+    </tbody>
+</table>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/pais/saveset" method="POST">
+    <div class="col-md-6">
+        <label for="id pais" class="form-label">id </label>
+        <input type="text" name="id pais" class="form-control" id="id pais" value="{{ pais.0 }}" readonly>
+    </div>
+  <div class="col-md-8">
+        <label for="nombre pais" class="form-label">nombre pais </label>
+        <input type="text" name="nombre pais" class="form-control" id="nombre pais" value="{{ pais.1 }}">
+    </div>
+  <div class="col-md-10">
+        <label for="abr" class="form-label">abreviacion (solo lectura) </label>
+        <input type="text" name="abr" class="form-control" id="abr" value="{{ pais.2 }}" readonly>
+    </div>
+    <div class="col-md-12">
+        <button type="submit">Guardar</button>
+    </div>
+</form>
+
+{% endblock %}
